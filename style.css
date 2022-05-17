@@ -27,6 +27,9 @@
   --weight-regular: 400;
   /* Size */
   --size-border-radius: 4px;
+
+  /* animation */
+  --animation-duration: 200ms;
 }
 /* Universial Tags */
 * {
@@ -153,6 +156,67 @@ p {
   color: var(--color-white);
 }
 
+/* Section Common */
 
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
 
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
 
+.major__icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  /* line-height을 높이만큼 지정시 자동으로 중간에 옴 */
+  line-height: 170px;
+  border-radius: 50%;
+  margin: auto;
+  border: 2px solid var(--color-blue);
+  margin-bottom: 16px;
+  color: var(--color-blue);
+}
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1, 1);
+}
+
+.major__title,
+.major__description
+{
+  color: var(--color-dark-grey);
+  font-size: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.job__name, .job__period
+{
+  color: var(--color-light-grey);
+}
+
+.job__name {
+  font-size: var(--font-small);
+}
+
+.job__period {
+  font-size: var(--font-micro);
+}
