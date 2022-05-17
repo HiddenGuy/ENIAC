@@ -1,3 +1,3 @@
 # ENIAC
  Jeongmin
- All rights reserved
+ All rights reserveded
