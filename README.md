@@ -1,2 +1,3 @@
 # ENIAC
- Jeong
+ Jeongmin
+ All rights reserved
