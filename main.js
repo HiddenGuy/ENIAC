@@ -31,16 +31,14 @@ navbarMenu.addEventListener('click', (event) => {
   //여기 왜 오류남
 });
 */
-
+//contact로 바꾸기 
 const contact = document.querySelector('.home__contact');
 contact.addEventListener('click', () => {
   scroll('#contact');
 });
 
-function scroll(sel) {
-  document.querySelector(sel).scrollIntoView({behavior:'smooth'});
-}
 
+//스크롤 하면 홈 transparent
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 
@@ -48,8 +46,23 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+//화살표 모양
+const arrow = document.querySelector('.arrow');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrow.classList.add('visible');
+  } else {
+    arrow.classList.remove('visible');
+  }
+});
+
+arrow.addEventListener('click', () => {
+  scroll('#home');
+});
 
 
 
-
-
+//클릭함수 
+function scroll(sel) {
+  document.querySelector(sel).scrollIntoView({behavior:'smooth'});
+}
