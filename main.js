@@ -3,10 +3,8 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 // () =>  <<등록한 함수 호출인듯?
-document.addEventListener('scroll', ()=> {
-  console.log(window.scrollY); 
+document.addEventListener('scroll', ()=> { 
   // $ <<= 이새끼 쓸 때는 어퍼스트로피 써야 됨 ㅇㅇ
-  console.log(`${navbarHeight}`);
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
   } else {
@@ -40,9 +38,17 @@ contact.addEventListener('click', () => {
 });
 
 function scroll(sel) {
-  console.log('dd');
   document.querySelector(sel).scrollIntoView({behavior:'smooth'});
 }
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
 
 
 

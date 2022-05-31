@@ -151,6 +151,11 @@ p {
   text-align: center;
 }
 
+#home.trans {
+  transition: all var(--animation-duration) ease-in;
+  opacity: 0;
+}
+
 .home__avatar {
   width: 250px;
   height: 250px;
