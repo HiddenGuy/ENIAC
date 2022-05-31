@@ -18,13 +18,32 @@ document.addEventListener('scroll', ()=> {
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
-  const link = target.dataset.link;
+  const link = target.dataset.link; //ㄹㅇ 이해 안됨 <<<<<<<<<<<<<<<<<
   if (link == null) {
     return;
   }
+
+  scroll(link);
+});
+  /*
   console.log(event.target.dataset.link); //event.target = 타겟이 되는 요소 로그에 보여줌
   // .dataset << 우리가 클래스에 data-link를 해놓음 .link 뭐이리 어렵냐
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({behavior: "smooth"}); //scrollIntoView link에 걸린 곳으로 이동
   //여기 왜 오류남
 });
+*/
+
+const contact = document.querySelector('.home__contact');
+contact.addEventListener('click', () => {
+  scroll('#contact');
+});
+
+function scroll(sel) {
+  console.log('dd');
+  document.querySelector(sel).scrollIntoView({behavior:'smooth'});
+}
+
+
+
+
