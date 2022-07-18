@@ -164,6 +164,9 @@ p {
 
 .home__title {
   color: var(--color-white);
+  padding: 100px 0;
+  margin: 100px 0;
+  background-color: chartreuse;
 }
 .home__description {
   color: var(--color-white);

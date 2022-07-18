@@ -49,7 +49,7 @@ document.addEventListener('scroll', () => {
 //화살표 모양
 const arrow = document.querySelector('.arrow');
 document.addEventListener('scroll', () => {
-  if (window.scrollY > homeHeight / 2) {
+  if (window.scrollY > homeHeight / 2 ) {
     arrow.classList.add('visible');
   } else {
     arrow.classList.remove('visible');
